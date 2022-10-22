@@ -1,0 +1,95 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "D:\chip\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\chip\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\chip\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\chip\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\chip\iverilog\lib\ivl\va_math.vpi";
+S_0000022a5aa5a320 .scope module, "decoder2to4_tb" "decoder2to4_tb" 2 5;
+ .timescale -9 -9;
+v0000022a5a982b40_0 .var "A", 1 0;
+v0000022a5a983680_0 .net "D", 3 0, L_0000022a5a983040;  1 drivers
+S_0000022a5a97a9d0 .scope module, "UUT" "decoder2to4" 2 10, 3 5 0, S_0000022a5aa5a320;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /OUTPUT 4 "D";
+L_0000022a5a9dae50 .functor AND 1, L_0000022a5a9830e0, L_0000022a5a984620, C4<1>, C4<1>;
+L_0000022a5a9daad0 .functor AND 1, L_0000022a5a983cc0, L_0000022a5a983fe0, C4<1>, C4<1>;
+L_0000022a5a9dab40 .functor AND 1, L_0000022a5a983540, L_0000022a5a984440, C4<1>, C4<1>;
+L_0000022a5a9dac90 .functor AND 1, L_0000022a5a984080, L_0000022a5a982c80, C4<1>, C4<1>;
+v0000022a5a976ca0_0 .net "A", 1 0, v0000022a5a982b40_0;  1 drivers
+v0000022a5a9762a0_0 .net "D", 3 0, L_0000022a5a983040;  alias, 1 drivers
+v0000022a5a976b60_0 .net "W", 3 0, L_0000022a5a984760;  1 drivers
+v0000022a5a976d40_0 .net *"_ivl_12", 0 0, L_0000022a5a9830e0;  1 drivers
+v0000022a5a976520_0 .net *"_ivl_14", 0 0, L_0000022a5a984620;  1 drivers
+v0000022a5a976340_0 .net *"_ivl_16", 0 0, L_0000022a5a9dae50;  1 drivers
+v0000022a5a9763e0_0 .net *"_ivl_20", 0 0, L_0000022a5a983cc0;  1 drivers
+v0000022a5a9765c0_0 .net *"_ivl_22", 0 0, L_0000022a5a983fe0;  1 drivers
+v0000022a5a976480_0 .net *"_ivl_24", 0 0, L_0000022a5a9daad0;  1 drivers
+v0000022a5a976700_0 .net *"_ivl_28", 0 0, L_0000022a5a983540;  1 drivers
+v0000022a5a9767a0_0 .net *"_ivl_30", 0 0, L_0000022a5a984440;  1 drivers
+v0000022a5a984260_0 .net *"_ivl_32", 0 0, L_0000022a5a9dab40;  1 drivers
+v0000022a5a983b80_0 .net *"_ivl_37", 0 0, L_0000022a5a984080;  1 drivers
+v0000022a5a983ae0_0 .net *"_ivl_39", 0 0, L_0000022a5a982c80;  1 drivers
+v0000022a5a983720_0 .net *"_ivl_41", 0 0, L_0000022a5a9dac90;  1 drivers
+L_0000022a5a982960 .part v0000022a5a982b40_0, 0, 1;
+L_0000022a5a9839a0 .part v0000022a5a982b40_0, 1, 1;
+L_0000022a5a984760 .concat8 [ 2 2 0 0], L_0000022a5a983360, L_0000022a5a982be0;
+L_0000022a5a9830e0 .part L_0000022a5a984760, 0, 1;
+L_0000022a5a984620 .part L_0000022a5a984760, 2, 1;
+L_0000022a5a983cc0 .part L_0000022a5a984760, 0, 1;
+L_0000022a5a983fe0 .part L_0000022a5a984760, 3, 1;
+L_0000022a5a983540 .part L_0000022a5a984760, 1, 1;
+L_0000022a5a984440 .part L_0000022a5a984760, 2, 1;
+L_0000022a5a983040 .concat8 [ 1 1 1 1], L_0000022a5a9dae50, L_0000022a5a9daad0, L_0000022a5a9dab40, L_0000022a5a9dac90;
+L_0000022a5a984080 .part L_0000022a5a984760, 1, 1;
+L_0000022a5a982c80 .part L_0000022a5a984760, 3, 1;
+S_0000022a5aa5e300 .scope module, "U0" "decoder1to2" 3 12, 3 23 0, S_0000022a5a97a9d0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /OUTPUT 2 "D";
+L_0000022a5a9da910 .functor NOT 1, L_0000022a5a982960, C4<0>, C4<0>, C4<0>;
+L_0000022a5a9daec0 .functor BUFZ 1, L_0000022a5a982960, C4<0>, C4<0>, C4<0>;
+v0000022a5a976f20_0 .net "A", 0 0, L_0000022a5a982960;  1 drivers
+v0000022a5a9760c0_0 .net "D", 1 0, L_0000022a5a983360;  1 drivers
+v0000022a5a976c00_0 .net *"_ivl_2", 0 0, L_0000022a5a9da910;  1 drivers
+v0000022a5a976fc0_0 .net *"_ivl_8", 0 0, L_0000022a5a9daec0;  1 drivers
+L_0000022a5a983360 .concat8 [ 1 1 0 0], L_0000022a5a9da910, L_0000022a5a9daec0;
+S_0000022a5aa5e490 .scope module, "U1" "decoder1to2" 3 13, 3 23 0, S_0000022a5a97a9d0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /OUTPUT 2 "D";
+L_0000022a5a9dabb0 .functor NOT 1, L_0000022a5a9839a0, C4<0>, C4<0>, C4<0>;
+L_0000022a5a9dac20 .functor BUFZ 1, L_0000022a5a9839a0, C4<0>, C4<0>, C4<0>;
+v0000022a5a976200_0 .net "A", 0 0, L_0000022a5a9839a0;  1 drivers
+v0000022a5a976ac0_0 .net "D", 1 0, L_0000022a5a982be0;  1 drivers
+v0000022a5a976660_0 .net *"_ivl_2", 0 0, L_0000022a5a9dabb0;  1 drivers
+v0000022a5a976de0_0 .net *"_ivl_8", 0 0, L_0000022a5a9dac20;  1 drivers
+L_0000022a5a982be0 .concat8 [ 1 1 0 0], L_0000022a5a9dabb0, L_0000022a5a9dac20;
+    .scope S_0000022a5aa5a320;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "decoder2to4_tb.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000022a5aa5a320 {0 0 0};
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0000022a5a982b40_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0000022a5a982b40_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0000022a5a982b40_0, 0, 2;
+    %delay 20, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v0000022a5a982b40_0, 0, 2;
+    %delay 20, 0;
+    %vpi_call 2 21 "$display", "end of test" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "decoder2to4_tb.v";
+    "./decoder.v";
