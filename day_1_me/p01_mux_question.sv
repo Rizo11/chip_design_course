@@ -22,6 +22,12 @@ module mux_4_1
 
   // Using code for mux_2_1 as an example,
   // write code for 4:1 mux using "?:" operator
+  wire [3:0] outD0, outD1;
+
+  mux_2_1 m1(.d0(d0), .d1(d1), .sel(sel[0]), .y(outD0));
+  mux_2_1 m2(.d0(d2), .d1(d3), .sel(sel[0]), .y(outD1));
+
+  assign y = sel[1] ? outD1 : outD0;
 
 
 endmodule

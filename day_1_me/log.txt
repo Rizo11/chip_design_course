@@ -1,7 +1,14 @@
 ALL PROBLEMS 
-TEST d { a b c d } sel 0 y z
-p01_mux_question.sv FAIL: a EXPECTED
-p01_mux_question.sv:61: $finish called at 1 (1s)
+TEST d { a b c d } sel 0 y a
+TEST d { a b c d } sel 1 y b
+TEST d { a b c d } sel 2 y c
+TEST d { a b c d } sel 3 y d
+TEST d { 7 a 3 x } sel 0 y 7
+TEST d { 7 a 3 x } sel 1 y a
+TEST d { 7 a 3 x } sel 2 y 3
+TEST d { 7 a 3 x } sel 3 y x
+p01_mux_question.sv PASS
+p01_mux_question.sv:85: $finish called at 8 (1s)
 TEST d { a b c d } sel 0 y x
 p02_mux_if.sv FAIL: a EXPECTED
 p02_mux_if.sv:65: $finish called at 1 (1s)
